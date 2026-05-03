@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        IMAGE = "your-dockerhub-username/devops-backend"
+        IMAGE = "mazharalyy/devops-backend"
     }
 
     stages {
 
         stage('Clone') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                 git credentialsId: 'github-creds', url: 'https://github.com/mazharali23/devops-project.git'
             }
         }
 
