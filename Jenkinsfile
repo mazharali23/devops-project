@@ -7,11 +7,7 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                 git credentialsId: 'github-creds', url: 'https://github.com/mazharali23/devops-project.git'
-            }
-        }
+    
 
         stage('Build') {
             steps {
